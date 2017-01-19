@@ -1,0 +1,47 @@
+@import 'variables';
+@import 'reset';
+@import 'fonts';
+
+// importing parts
+@import 'modal';
+
+
+h1 {
+    padding: 5px 10px;
+}
+
+#app {
+    .tabs, .title {
+        text-align: center;
+    }
+
+    .tabs {
+        margin-bottom: 10px;
+    }
+
+    .todo-list_item {
+        @include user-select(none);
+
+        cursor: pointer;
+        height: 30px;
+        background-color: #fff;
+        line-height: 30px; 
+        padding-left: 15px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+
+    .done {
+        text-decoration: line-through;
+        color: #999;
+    }
+
+
+    .todo-list_item__deletelink {
+        @include user-select(none);
+        
+        float: right;
+        color: #FF4B3E;
+        margin-right: 5px;
+    }
+}

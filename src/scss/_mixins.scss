@@ -1,0 +1,13 @@
+@mixin user-select($userSelect) {
+  -webkit-user-select: $userSelect;
+     -moz-user-select: $userSelect;
+      -ms-user-select: $userSelect;
+          user-select: $userSelect;
+}
+
+@mixin transition($seconds, $type) {
+  -webkit-transition: all $seconds $type;
+     -moz-transition: all $seconds $type;
+      -ms-transition: all $seconds $type;
+          transition: all $seconds $type;
+}

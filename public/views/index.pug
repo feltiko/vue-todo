@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(href='./css/style.css', rel='stylesheet')
+  body
+  
+  script(type="text/x-template" id="modal-template")
+    transition(name="modal")
+      div.modal
+        div.modal-centered
+          span(class="modal-centered_close" @click="$emit('close')") Close
+          div.modal-centered__wrapper
+            label.modal-centered__label Task text
+            input.modal-centered__input(type="text" v-model="taskText"  name="task")
+            input.modal-centered__radio(type="radio" v-model="taskDate" name="date" id="today" value="today") 
+            label.modal-centered__radiolabel(for="today") Today
+            input.modal-centered__radio(type="radio" v-model="taskDate" name="date" id="tommorow" value="tommorow") 
+            label.modal-centered__radiolabel(for="tommorow") Tommorow
+            button.modal-centered__button( @click="addTask()") Add task
+            
+
+
+  div#app 
+    div.title {{ title }}
+    tabs
+    todo-list(v-bind:todos="mapTodos")
+
+    modal(v-if="showModal" @close="showModal = false")
+      //- todo-item(v-for="item in todos" v-bind:todo="item")
+
+  script(src='./js/main.js')

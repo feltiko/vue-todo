@@ -1,0 +1,96 @@
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transition: all .3s ease; }
+  .modal .modal-centered {
+    width: 360px;
+    height: 200px;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -180px;
+    margin-top: -100px; }
+    .modal .modal-centered .modal-centered_close {
+      position: absolute;
+      cursor: pointer;
+      right: 15px;
+      top: 5px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+
+.modal-centered__wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 25px; }
+
+.modal-centered__label {
+  width: 100%;
+  color: #999; }
+
+.modal-centered__input {
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #999;
+  outline: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .modal-centered__input:focus {
+    border-bottom: 1px solid #85C7F2; }
+
+.modal-centered__radio {
+  opacity: 0; }
+  .modal-centered__radio:checked + .modal-centered__radiolabel {
+    background-color: #85C7F2;
+    color: white; }
+
+.modal-centered__radiolabel {
+  float: left;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid #85C7F2;
+  margin: 20px 5px;
+  background-color: #fff;
+  color: #85C7F2;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .modal-centered__radiolabel:nth-child(0) {
+    margin-left: 0; }
+
+.modal-centered__button {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #85C7F2;
+  color: #85C7F2;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.modal-enter {
+  opacity: 0; }
+
+.modal-leave-active {
+  opacity: 0; }
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
